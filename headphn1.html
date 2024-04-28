@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+       
+    #header{
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    padding: 20px 0px;
+    position: fixed;
+    top: 0;
+    right: 0px;
+    left: 0px;
+    z-index: 9999;
+    width: 100%;
+    height: 45px;
+    background-color: white;
+    
+    box-shadow: rgba(40, 40, 40, 0.1) 0px 20px 20px -10px;
+}
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.mouse{
+  cursor: pointer;
+  border: none;
+  background-color: white;
+  font-size: 16px;
+}
+.curser{
+  width: 90%;
+  padding: 40px;
+  margin: auto;
+  display:grid;
+  /* margin-top: 80px; */
+  display: none;
+  cursor: pointer;
+  grid-template-columns: repeat(4,1fr);
+  justify-content: space-around;
+  position: absolute;
+  position: fixed;
+  /* margin-left: 150px; */
+  background-color: #fff;
+  margin-top: 50px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+.curser>div{
+  margin: auto;
+  text-align: center;
+}
+
+.search>input{
+  border-radius: 23px;
+  padding: 0 30px;
+  border: none;
+  /* margin-top: 14px; */
+  background-color: #f7f4f4;
+  /* border: 2px solid red; */
+}
+
+.category{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+.search{
+    display: flex;
+    
+    gap: 30px;
+}
+
+.container{
+    
+    width: 100%;
+    /* margin-top:20%; */
+    margin-top: 200px;
+
+}
+.wrapper{
+    width: 90%;
+    height:100vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+.text{
+    flex-basis: 45%;
+
+}
+.all-images{
+    height: 80vh;
+    display: flex;
+}
+.small-images{
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    margin-left: 100px;
+
+}
+.small-images img{
+    height: 19vh;
+    padding: 10px;
+    margin-bottom: 9px;
+    cursor: pointer;
+    border-radius: 50px;
+    opacity: 0.7;
+}
+.small-images img:hover{
+    opacity: 1;
+} 
+.main-images img{
+    height: 100%;
+    margin-left: 50px;
+    margin-top: 100px;
+
+}
+p{
+    margin-bottom: 20px;
+}
+.brand{
+    background-color: #008000;
+    width: fit-content;
+    color:#fff;
+    font-size: 12px;
+    padding: 2px 5px;
+}
+h2{
+    font-size: 35px;
+    color: #555;
+    margin-bottom: 20px;
+}
+.review{
+    background-color: green;
+    display: inline-block;
+    color: #fff;
+    padding: 4px;
+    border-radius: 5px;
+
+}
+.review .fa{
+    color:#fff;
+}
+.price{
+    color: red;
+    font-size: 28px;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-right: 10px;
+
+}
+.price-box{
+      display: flex;
+      align-items: center;
+
+}
+.text button{
+    width: 140px;
+    color: #fff;
+    font-size: 15px;
+    outline: none;
+    border: 0;
+    border-radius: 5px;
+    background-color: #fe980f;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    cursor: pointer;
+} 
+.text >button .fa{
+    margin-right: 10px;
+}
+.buy{
+    background-color: rgb(201,97,57);
+}
+.main{
+    background-color: ghostwhite;
+    color: black;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:20px;
+    justify-content: space-between;
+} 
+.main{
+    background-color: ghostwhite;
+    color: black;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:20px;
+    justify-content: space-between;
+}
+
+.sbmain p{
+    float: right;
+    width: 200px;
+    font-family:Montserrat; 
+}
+.sbmain img{
+    height: 60px;
+    padding-left: 40px;
+    margin-left: 150px;
+}
+
+.main2{
+    background-image: url(images/banner4.jpg) ;
+    color:rgb(201, 194, 194);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:30px;
+    justify-content: space-between;
+}
+.sbmain1 p{
+    font-family:Montserrat;
+    margin-left:50px ;
+}
+
+.sbmain2 img{
+    width: 100%;
+}
+
+.main4 h1{
+    text-align:center;
+    font-size: 50px;
+    margin-top: 20px;
+}
+.main4 p{
+   padding: 8px;
+   text-align: center;
+   font-family: monospace;
+   font-size:15px;
+}
+p{
+    padding-top: 20px;
+}
+#footer1{
+    display: flex;
+    gap: 60px;
+    margin-top: 40px;
+    width: 96%;
+    margin: auto;
+    margin-top: 30px;
+}
+#footer1 p{
+  font-size: 13px;
+  color: rgb(158, 157, 157);
+}
+
+.f1{
+    width:10%;
+
+}
+.vLine{
+  border: 1px solid rgb(230, 230, 230);;
+  width: 0px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+
+
+}
+.oddL{
+  margin-top: 50px;
+  margin-bottom: 120px;
+  margin-right: -40px;
+
+}
+.oddL2{
+  margin-top: 50px;
+  margin-bottom: 180px;
+  margin-right: -40px; 
+}
+
+.socialMedia{
+  display: flex;
+  gap: 30px;
+  font-size: 25px;
+  width: 96%;
+  margin: auto;
+}
+.playStore{
+  display: flex;
+}
+.extra{
+  display: flex;
+  gap: 600px;
+  width: 96%;
+  margin: auto;
+
+}
+.banner{
+  height: 500px;
+  width: 1900px;
+  background-repeat: no-repeat;
+}
+
+.emailSubmit{
+  border: 1px solid red;
+  padding: 6px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+}
+.emailSubmit>button{
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 17px;
+  padding: 10px 25px;
+  background-color: rgb(220, 24, 37);
+}
+.emailSubmit>input{
+  border: none;
+  box-sizing: border-box;
+  width: 100%;
+}
+hr{
+    width: 96%;
+    margin: auto;
+}
+a{
+  text-decoration: none;
+  color:black
+}
+
+
+
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <div id="header">
+            <div class="logo">
+                <a href="homepage.html"><img src="images/boat.avif" alt=""></a>
+            </div>
+            <div class="category">
+                <p> <button class="mouse">CATEGORIES</button></p>
+                <p>SAIL WITH BOAT</p>
+                <p>OFFER ZONE</p>
+                <p>MORE</p>
+            </div>
+            <div class="search">
+                <input type="search" placeholder='Enter Product Name Here'>
+                
+                <p><i class="fa-solid fa-user"></i></p>
+                <p><i class="fa-solid fa-headset"></i></p>
+                <p><i class="fa-solid fa-cart-shopping"></i></p>
+            </div>
+        </div>
+        <div class="curser">
+          <div>
+            <img src="images/category1.webp"
+              alt="">
+            <h3>Airdropes True Wirelss</h3>
+          </div>
+          <div>
+            <img src="images/category2.webp"
+              alt="">
+            <h3>Rockerz Wireless</h3>
+          </div>
+          <div>
+            <img src="images/category3.webp" height="100px" width="100px" alt="">
+            <h3>Smart Watches</h3>
+          </div>
+          <div>
+            <img
+              src="images/category4.webp" height="100px" width="100px"  alt="">
+            <h3>Basshead Wired</h3>
+          </div>
+          <div>
+            <img src="images/category5.webp" alt="">
+            <h3>Stone Speakers</h3>
+          </div>
+          <div>
+            <img
+              src="images/category6.webp" alt="">
+            <h3>Aavante Home Audio</h3>
+          </div>
+          <div>
+            <img
+              src="images/category7.webp" height="100px" width="100px" alt="">
+            <h3>Mobile Accessories</h3>
+          </div>
+          <div>
+            <img
+              src="images/category8.webp" alt="">
+            <h3>Trebel for Women</h3>
+          </div>
+          <div>
+            <img
+              src="images/category9.webp" alt="">
+            <h3>Limited Edition</h3>
+          </div>
+          <div>
+            <img src="images/category10.webp" alt="">
+            <h3>Misfit Trimmers</h3>
+          </div>
+          <div>
+            <img
+              src="images/category11.webp" alt="">
+            <h3>Immortal Gaming</h3>
+          </div>
+        </div>
+ </div>
+      </div>
+      <div class="container">
+        <div class="wrapper">
+            <div class="product-box">
+                <div class="all-images">
+    
+                <div class="small-images">
+                    <img src="images/headphone1.jpg" onclick="clickimg(this)">
+                    <img src="images/headphone2.jpg" onclick="clickimg(this)">
+                    <img src="images/headphone3.jpg" onclick="clickimg(this)">
+                         </div>
+                <div class="main-images">
+                    <img src="images/product2.webp" id="imagebox">
+                </div>
+                </div>
+            </div>
+            <div class="text">
+                <div class="content">
+                    <p class="brand">Brand:boAt</p>
+                    <h2>boAt Rockerz 235 V2</h2>
+                    <div class="review">
+                        <span>(4.9)</span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <div class="pricebox">
+                        <p class="price">&#8377;799</p>
+                       <s>&#8377; 2990</s>
+                    </div>
+                   
+                    <button>
+                        <span class="fa fa-shopping-cart"></span>
+                        Add to Cart
+                    </button>
+                    <button class="buy">
+                        <span class="fa fa-shopping-cart"></span>
+                        Buy now
+                    </button>
+                </div>
+            </div>
+        </div>
+       </div> 
+       <div class="main">
+        <div class="sbmain">
+            <img src="images/icon1.webp">
+            <p>1 Year Warranty</p>
+        </div>
+        <div class="sbmain">
+            <img src="images/icon2.webp">
+            <p>7 Days Replacement</p>
+        </div>
+        <div class="sbmain">
+            <img src="images/icon3.webp">
+            <p> Free Shipping</p>
+        </div>
+        <div class="sbmain">
+            <img src="images/icon4.webp">   
+            <p>Secure Checkout</p>
+        </div>
+    </div>
+    <!-- main heading3-->
+    <div class="main3">
+        <div class="sbmain2">
+            <img src="images/banner1.webp">
+        </div>
+    </div>
+    <!-- boAt Airdopes 131 - Wireless Earbuds -->
+    <div class="main4">
+        <h1>boAt Rockerz 235 V2</h1>
+        <p style="text-align:center">Sleek. Comfortable. Stylish. And a Splash of Incredible Colours. Bring alive your favourite sounds with these true wireless earbuds Equipped with 13mm drivers for the magical boAt signature sound. Designed for supreme ease with Insta Wake N’ Pair technology that auto connects the moment it’s out of the case and Type C Charging. Tws earbuds to drown all the sounds you don’t need and live every moment. With a battery capacity of 40mAh for each earbud, indulge in a blissful audio experience for up to 3 hours in a go. Tap into instant wireless functionality with optimum Bluetooth V5.0</p>
+    </div>
+     <!-- main heading2 -->
+     <div class="main2">
+      <img src="images/banner4.jpg" alt="" class="banner">
+    </div>
+    <div class="main2">
+      <img src="images/banner5.webp" alt="" class="banner">
+    </div>
+    <div id="footer1">
+        <div>
+          <img src="images/boat.avif" alt="">
+          <p>Subscribe to email alerts. We promise not to spam your inbox.</p>
+          <div class="emailSubmit">
+            <input type="email" placeholder="Email Address">
+            <button>SUBSCRIBE</button>
+          </div>
+        </div>
+        
+        <div class="f1">
+          <h3>SHOP</h3>
+          <p>True Wireless Earbuds</p>
+          <p>Wired Headphones</p>
+          <p>Home Audio</p>
+          <p>Smart Watches</p>
+          <p>Misfit</p>
+          <p>Rock in India</p>
+        </div>
+        <div class="vLine oddL"></div>
+        <div class="f1">
+          <h3> </h3><br>
+          <p>Wireless Headphones</p>
+          <p>Wireless Speakers</p>
+          <p>Mobile Accessories</p>
+          <p>TRebel</p>
+          <p>Gift Card</p>
+          <p>Earn Rs. 100</p>
+        </div>
+        <div class="vLine"></div>
+        <div class="f1">
+          <h3>HELP</h3>
+          <p>Track your order</p>
+          <p>Return policy</p>
+          <p>Bulk order</p>
+          <p>Why buy direct</p>
+        </div>
+        <div class="vLine oddL2"></div>
+        <div class="f1">
+          <h3></h3><br>
+          <p>Warranty & Support</p>
+          <p>Service Centers</p>
+          <p>FAQs</p>
+        </div>
+        <div class="vLine"></div>
+        <div class="">
+          <h3>COMPANY</h3>
+          <p>About boAt</p>
+          <p>News</p>
+          <p>Read Our Blog</p>
+          <p>Careers</p>
+          <p>Security</p>
+          <p>Terms of Service</p>
+          <p>Privacy Policy</p>
+          <p>Investor Relations</p>
+          <p>Social Responsibility</p>
+          <p>Warranty Policy</p>
+        </div>
+      </div>
+      <hr>
+  
+      <div class="socialMedia">
+        <p><i class="fa-brands fa-facebook-f"></i></p>
+        <p><i class="fa-brands fa-twitter"></i></p>
+        <p><i class="fa-brands fa-instagram"></i></p>
+        <p><i class="fa-brands fa-youtube"></i></p>
+        <p><i class="fa-brands fa-linkedin-in"></i></p>
+      </div><hr>
+  
+      <div class="extra">
+        <div>
+          <h3>Download the App</h3>
+          <div class="playStore">
+            <img src="images/footer1.avif" alt="">
+            <img src="images/footer2.avif" alt="">
+          </div>
+        </div>
+        <div>
+          <h3>We Accept</h3>
+          <img src="images/footer3.avif" alt="">
+        </div>
+    
+</body>
+</html>
+<script src="https://kit.fontawesome.com/0ed43cb816.js" crossorigin="anonymous"></script>
+<script>
+    function displayData(){
+    var keep = document.querySelector(".curser")
+    keep.style.display = "grid";
+    keep.style.background = "white";
+    document.querySelector(".mouse").addEventListener("mouseleave",removeData)
+  }
+  document.querySelector(".mouse").addEventListener("mouseover",displayData)
+  
+  function removeData(){
+    var keep = document.querySelector(".curser")
+    keep.style.display = "none";
+  }
+  document.querySelector(".mouse").addEventListener("mouseleave",removeData)
+
+
+
+  
+    function clickimg(smallImg)
+    {
+        var fullImg=document.getElementById("imagebox");
+        fullImg.src=smallImg.src;
+    }
+
+    function displayData(){
+    var keep = document.querySelector(".curser")
+    keep.style.display = "grid";
+    keep.style.background = "white";
+    document.querySelector("body").addEventListener("mouseleave",removeData)
+  }
+  document.querySelector(".mouse").addEventListener("mouseover",displayData)
+  
+  function removeData(){
+    var keep = document.querySelector(".curser")
+    keep.style.display = "none";
+  }
+  document.querySelector("body").addEventListener("mouseleave",removeData)
+   
+
+
+
+
+
+</script>
+</script>
